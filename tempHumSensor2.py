@@ -4,7 +4,7 @@ import time
 channel =15 
 data = []
 j = 0
-GPIO.setmode(GPIO.BCM)
+GPIO.setmode(GPIO.BOARD)
 time.sleep(1)
 GPIO.setup(channel, GPIO.OUT)
 GPIO.output(channel, GPIO.LOW)
