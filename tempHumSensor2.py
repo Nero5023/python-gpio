@@ -1,7 +1,7 @@
 #!/usr/bin/python
 import RPi.GPIO as GPIO
 import time
-channel =15 
+channel =13 
 data = []
 j = 0
 GPIO.setmode(GPIO.BOARD)

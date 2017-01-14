@@ -1,7 +1,7 @@
 import RPi.GPIO as GPIO
 import time
 
-channel = 15
+channel = 13
 
 def bin2dec(string_num):
     return str(int(string_num, 2))
