@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 import time
-channel = 27
+channel = 13
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(channel, GPIO.IN)
