@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO
 import time
 
+channel = 15
+
 def bin2dec(string_num):
     return str(int(string_num, 2))
 
@@ -8,16 +10,16 @@ data = []
 
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(4,GPIO.OUT)
-GPIO.output(4,GPIO.HIGH)
+GPIO.setup(channel,GPIO.OUT)
+GPIO.output(channel,GPIO.HIGH)
 time.sleep(0.025)
-GPIO.output(4,GPIO.LOW)
+GPIO.output(channel,GPIO.LOW)
 time.sleep(0.02)
 
-GPIO.setup(4, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+GPIO.setup(channel, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 for i in range(0,500):
-    data.append(GPIO.input(4))
+    data.append(GPIO.input(channel))
 
 bit_count = 0
 tmp = 0
